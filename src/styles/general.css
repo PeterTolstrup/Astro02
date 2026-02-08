@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header,
+section {
+  padding: 1.5rem;
+}
+
+header {
+  background-image: url("/imgs/Banner.webp");
+  background-size: cover;
+  padding: 4rem;
+}
+
+header p {
+  font-size: larger;
+}
+
+img {
+  max-width: 100%;
+}
+
+.column_3_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media screen and (width >= 768px) {
+  .column_3_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
