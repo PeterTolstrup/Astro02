@@ -27,14 +27,18 @@ img {
   max-width: 100%;
 }
 
-.column_3_grid {
+.grid_column_3, .grid_column_2{
+    margin-top: 1rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
 
 @media screen and (width >= 768px) {
-  .column_3_grid {
+  .grid_column_2 {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .grid_column_3 {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
