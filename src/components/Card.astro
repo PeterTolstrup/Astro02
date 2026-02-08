@@ -1,8 +1,8 @@
 ---
-const { img, headline, text, variant } = Astro.props;
+const { img, headline, text, size, direction } = Astro.props;
 ---
 
-<article class={variant}>
+<article class=`${size + " " + direction}`>
   <img src={img} />
   <div class="content">
     <h3>{headline}</h3>
@@ -20,7 +20,6 @@ const { img, headline, text, variant } = Astro.props;
   img {
     width: 100%;
   }
-
   .big {
     grid-column: span 1;
     display: flex;
@@ -41,19 +40,18 @@ const { img, headline, text, variant } = Astro.props;
       align-items: center;
       gap: 1rem;
     }
-
+    .big.left {
+      flex-direction: row-reverse;
+    }
     .big img {
       max-width: 45%;
     }
-
     .big .content {
       width: 45%;
     }
-
     .big .content h3{
       font-size:x-large;
     }
-
     .big .content p{
       font-size: large;
     }
