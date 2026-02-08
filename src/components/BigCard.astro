@@ -1,0 +1,59 @@
+---
+const { img, headline, text, direction } = Astro.props;
+---
+
+<article class={direction}>
+  <img src={img} />
+  <div class="content">
+    <h3>{headline}</h3>
+    <p>{text}</p>
+  </div>
+</article>
+<style>
+  h3 {
+    font-size: medium;
+    margin-bottom: 0.25rem;
+  }
+  p {
+    font-size: smaller;
+    margin-bottom: 0.25rem;
+  }
+  img {
+    width: 100%;
+  }
+
+  .right p {
+    color:aqua;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media screen and (width >= 768px) {
+    h3 {
+      font-size: larger;
+    }
+    p {
+      font-size: medium;
+    }
+
+    img,
+    .content {
+      width: 45%;
+    }
+
+    article {
+      grid-column: span 2;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    article.left {
+      flex-direction:row-reverse;
+    }
+  }
+</style>

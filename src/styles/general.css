@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, p {
+    margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header,
+section {
+  padding: 2rem;
+}
+
+header {
+  background-image: url("/imgs/Banner.webp");
+  background-size: cover;
+  color: white;
+}
+
+.grid_3_column, .grid_2_column {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+@media screen and (width >= 768px) {
+  .grid_3_column {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid_2_column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

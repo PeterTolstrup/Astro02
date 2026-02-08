@@ -1,11 +1,30 @@
 ---
-const {img, headline, text} = Astro.props;
+const { img, headline, text } = Astro.props;
 ---
+
 <article>
   <img src={img} />
   <h3>{headline}</h3>
   <p>{text}</p>
 </article>
 <style>
-    
+  h3 {
+    font-size: smaller;
+    margin-bottom: 0.25rem;
+  }
+  p {
+    font-size: smaller;
+    margin-bottom: 0.25rem;
+  }
+  img {
+    width: 100%;
+  }
+  @media screen and (width >= 768px) {
+    h3 {
+      font-size: medium;
+    }
+    p {
+      font-size: medium;
+    }
+  }
 </style>
