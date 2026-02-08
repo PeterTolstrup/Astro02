@@ -1,11 +1,13 @@
 ---
-const { img, headline, text } = Astro.props;
+const { img, headline, text, variant } = Astro.props;
 ---
 
-<article>
+<article class={variant}>
   <img src={img} />
-  <h3>{headline}</h3>
-  <p>{text}</p>
+  <div class="content">
+    <h3>{headline}</h3>
+    <p>{text}</p>
+  </div>
 </article>
 
 <style>
@@ -15,9 +17,14 @@ const { img, headline, text } = Astro.props;
   p {
     font-size: smaller;
   }
-
   img {
-    min-width: 100%;
+    width: 100%;
+  }
+
+  .big {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
   }
   @media screen and (width >= 768px) {
     h3 {
@@ -25,6 +32,30 @@ const { img, headline, text } = Astro.props;
     }
     p {
       font-size: medium;
+    }
+    .big {
+      grid-column: span 2;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .big img {
+      max-width: 45%;
+    }
+
+    .big .content {
+      width: 45%;
+    }
+
+    .big .content h3{
+      font-size:x-large;
+    }
+
+    .big .content p{
+      font-size: large;
     }
   }
 </style>
