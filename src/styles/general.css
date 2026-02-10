@@ -4,8 +4,11 @@
   padding: 0;
 }
 
-h1, h2, h3, p {
-    margin-bottom: 1rem;
+h1,
+h2,
+h3,
+p {
+  margin-bottom: 1rem;
 }
 
 img {
@@ -17,7 +20,8 @@ body {
 }
 
 header,
-section {
+section,
+nav {
   padding: 2rem;
 }
 
@@ -27,11 +31,12 @@ header {
   color: white;
 }
 
-.grid_3_column, .grid_2_column {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+.grid_3_column,
+.grid_2_column {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
 
 @media screen and (width >= 768px) {
   .grid_3_column {

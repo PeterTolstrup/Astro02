@@ -1,43 +1,33 @@
 ---
-import "../styles/general.css";
+import PageLayout from "../layouts/PageLayout.astro";
 import Card from "../components/Card.astro";
 import BigCard from "../components/BigCard.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro 02</title>
-  </head>
-  <body>
-    <header>
-      <h1>Astro 02</h1>
-      <p>Hej hej med dig</p>
-    </header>
-    <section>
-      <h2>Headline</h2>
-      <p>Mere tekst</p>
-    </section>
-    <section>
-      <h2>Card section</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et itaque nisi consectetur soluta dicta molestiae ipsam odit, iure error quisquam sed dolorum quod animi assumenda perspiciatis ipsa aperiam voluptatibus eveniet!</p>
-      <div class="grid_3_column">
-        <Card img="/imgs/Card-img-01.webp" headline="Card overskrift" text="Et itaque nisi consectetur" />
-        <Card img="/imgs/Card-img-02.webp" headline="Overskrift" text="Lorem ipsum dolor sit amet" />
-        <Card img="/imgs/Card-img-03.webp" headline="Card Yo" text="dicta molestiae ipsam odit, " />
-      </div>
-    </section>
-     <section>
-      <h2>Big Card section</h2>
-      <p>Et itaque nisi consectetur soluta dicta molestiae ipsam odit, iure error quisquam sed dolorum quod animi assumenda perspiciatis ipsa aperiam voluptatibus eveniet!</p>
-      <div class="grid_2_column">
-        <BigCard img="/imgs/BigCard-img-01.webp" headline="Et itaque nisi consectetur soluta" text="Et itaque nisi consectetur soluta dicta molestiae ipsam odit. Lorem ipsum dolor sit amet consectetur adipisicing elit." direction="right"/>
-        <BigCard img="/imgs/BigCard-img-02.webp" headline="Lorem ipsum dolor sit amet consectetur" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Et itaque nisi consectetur soluta dicta molestiae ipsam." direction="left"/>
-      </div>
-    </section>
-  </body>
-</html>
+<PageLayout title="Home">
+  <header>
+    <h1>Astro 02</h1>
+    <p>Hej hej med dig</p>
+  </header>
+  <section>
+    <h2>Headline</h2>
+    <p>Mere tekst</p>
+  </section>
+  <section>
+    <h2>Card section</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et itaque nisi consectetur soluta dicta molestiae ipsam odit, iure error quisquam sed dolorum quod animi assumenda perspiciatis ipsa aperiam voluptatibus eveniet!</p>
+    <div class="grid_3_column">
+      <Card img="/imgs/Card-img-01.webp" headline="Card overskrift" text="Et itaque nisi consectetur" />
+      <Card img="/imgs/Card-img-02.webp" headline="Overskrift" text="Lorem ipsum dolor sit amet" />
+      <Card img="/imgs/Card-img-03.webp" headline="Card Yo" text="dicta molestiae ipsam odit, " />
+    </div>
+  </section>
+  <section>
+    <h2>Big Card section</h2>
+    <p>Et itaque nisi consectetur soluta dicta molestiae ipsam odit, iure error quisquam sed dolorum quod animi assumenda perspiciatis ipsa aperiam voluptatibus eveniet!</p>
+    <div class="grid_2_column">
+      <BigCard img="/imgs/BigCard-img-01.webp" headline="Et itaque nisi consectetur soluta" text="Et itaque nisi consectetur soluta dicta molestiae ipsam odit. Lorem ipsum dolor sit amet consectetur adipisicing elit." direction="right" />
+      <BigCard img="/imgs/BigCard-img-02.webp" headline="Lorem ipsum dolor sit amet consectetur" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Et itaque nisi consectetur soluta dicta molestiae ipsam." direction="left" />
+    </div>
+  </section>
+</PageLayout>
